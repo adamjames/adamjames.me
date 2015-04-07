@@ -5,8 +5,15 @@ img {
 	border-radius: 5px;
 }
 
-/* This is probably terrible, but I understand it. */
+/* This is probably terrible, but I understand it. 
+Has the effect of giving the page a clear border. */
 body {
 	padding-left: 10%;
 	max-width: 90%;
+}
+
+
+/* Increased this from 14px to 15px to avoid strange kerning effects. */
+p {
+	font-size: 15px;
 }
