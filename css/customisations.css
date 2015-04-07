@@ -1,0 +1,12 @@
+/* rounded border on images, from Lanyon by @mdo. */
+img {
+	display: block;
+	margin: 0 0 1rem;
+	border-radius: 5px;
+}
+
+/* This is probably terrible, but I understand it. */
+body {
+	padding-left: 10%;
+	max-width: 90%;
+}
