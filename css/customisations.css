@@ -6,14 +6,19 @@ img {
 }
 
 /* This is probably terrible, but I understand it. 
-Has the effect of giving the page a clear border. */
+Has the effect of giving the page a clear border.
+Also (Sept '15) switched to Vollkorn for text. */
 body {
 	padding-left: 10%;
 	max-width: 90%;
+	font-family: 'Vollkorn', serif;
 }
 
 
-/* Increased this from 14px to 15px to avoid strange kerning effects. */
+/* Increased this from 14px to 15px to avoid strange kerning effects. 
+Also (Sept '15) switched to Vollkorn for text. */
 p {
 	font-size: 15px;
+	font-family: 'Vollkorn', serif;
 }
+
