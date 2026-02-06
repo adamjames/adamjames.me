@@ -1,0 +1,15 @@
+<footer class="sitefooter" role="contentinfo">
+<nav>
+<?php if ($this->yellow->system->get("githubUrl")): ?><a href="<?php echo $this->yellow->system->getHtml("githubUrl") ?>">GitHub</a><?php endif ?>
+<?php if ($this->yellow->system->get("twitterUrl")): ?><a href="<?php echo $this->yellow->system->getHtml("twitterUrl") ?>">Twitter</a><?php endif ?>
+<?php if ($this->yellow->system->get("linkedinUrl")): ?><a href="<?php echo $this->yellow->system->getHtml("linkedinUrl") ?>">LinkedIn</a><?php endif ?>
+<?php if ($this->yellow->system->get("mastodonUrl")): ?><a href="<?php echo $this->yellow->system->getHtml("mastodonUrl") ?>">Mastodon</a><?php endif ?>
+</nav>
+<?php if ($this->yellow->system->get("sourceUrl")): ?>
+<span>Source on <a href="<?php echo $this->yellow->system->getHtml("sourceUrl") ?>" class="link">GitHub</a></span>
+<?php endif ?>
+</footer>
+</div>
+<?php echo $this->yellow->page->getExtraHtml("footer") ?>
+</body>
+</html>

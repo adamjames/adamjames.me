@@ -1,0 +1,46 @@
+<?php $this->yellow->layout("adamjames-header") ?>
+<div class="content">
+  <div class="main cv-page" role="main">
+
+    <header class="cv-header">
+      <h1><?php echo $this->yellow->page->getHtml("title") ?></h1>
+      <div class="cv-intro">
+        <?php echo $this->yellow->page->getContentHtml() ?>
+      </div>
+    </header>
+
+    <div class="cv-entries">
+      <?php $entries = $this->yellow->page->getChildren() ?>
+      <?php foreach ($entries as $entry): ?>
+      <article class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-year"><?php echo htmlspecialchars($entry->get("year")) ?></span>
+          <div class="cv-title">
+            <?php $companyName = $entry->isExisting("companyFull") ? $entry->get("companyFull") : $entry->get("company") ?>
+            <?php if ($entry->isExisting("url") && $entry->get("url")): ?>
+            <h2><a href="<?php echo htmlspecialchars($entry->get("url")) ?>"><?php echo htmlspecialchars($companyName) ?></a></h2>
+            <?php else: ?>
+            <h2><?php echo htmlspecialchars($companyName) ?></h2>
+            <?php endif ?>
+            <span class="cv-role"><?php echo htmlspecialchars($entry->get("role")) ?></span>
+          </div>
+          <div class="cv-tags">
+            <?php foreach (preg_split("/\s*,\s*/", $entry->get("tags")) as $tag): ?>
+            <span class="tag"><?php echo htmlspecialchars($tag) ?></span>
+            <?php endforeach ?>
+            <span class="tag tag-<?php echo htmlspecialchars($entry->get("industryColor")) ?>"><?php echo htmlspecialchars($entry->get("industry")) ?></span>
+          </div>
+        </div>
+        <?php $content = trim($entry->getContentHtml()) ?>
+        <?php if ($content): ?>
+        <div class="cv-entry-content">
+          <?php echo $content ?>
+        </div>
+        <?php endif ?>
+      </article>
+      <?php endforeach ?>
+    </div>
+
+  </div>
+  <?php $this->yellow->layout("adamjames-footer") ?>
+</div>

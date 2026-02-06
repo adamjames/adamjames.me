@@ -1,0 +1,30 @@
+<?php list($name, $pages) = $this->yellow->getLayoutArguments() ?>
+<?php if ($pages->isPagination()): ?>
+<div class="pagination" role="navigation" aria-label="<?php echo $this->yellow->language->getTextHtml("corePagination") ?>">
+<div class="nav-buttons">
+<?php if ($pages->getPaginationPrevious()): ?>
+<a class="previous" href="<?php echo $pages->getPaginationPrevious() ?>"><?php echo $this->yellow->language->getTextHtml("corePaginationPrevious") ?></a>
+<?php else: ?>
+<span class="previous disabled"><?php echo $this->yellow->language->getTextHtml("corePaginationPrevious") ?></span>
+<?php endif ?>
+<?php if ($pages->getPaginationNext()): ?>
+<a class="next" href="<?php echo $pages->getPaginationNext() ?>"><?php echo $this->yellow->language->getTextHtml("corePaginationNext") ?></a>
+<?php else: ?>
+<span class="next disabled"><?php echo $this->yellow->language->getTextHtml("corePaginationNext") ?></span>
+<?php endif ?>
+</div>
+<span class="page-numbers">
+<?php $current = $pages->getPaginationNumber() ?>
+<?php $total = $pages->getPaginationCount() ?>
+<?php $base = preg_replace('/page:\d+$/', '', $this->yellow->page->getLocation(true)) ?>
+<?php for ($i = 1; $i <= $total; $i++): ?>
+<?php $href = ($i == 1) ? rtrim($base, '/') . '/' : $base . 'page:' . $i ?>
+<?php if ($i == $current): ?>
+<span class="page-number current"><?php echo $i ?></span>
+<?php else: ?>
+<a class="page-number" href="<?php echo $href ?>"><?php echo $i ?></a>
+<?php endif ?>
+<?php endfor ?>
+</span>
+</div>
+<?php endif ?>

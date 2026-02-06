@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="<?php echo $this->yellow->page->getHtml("language") ?>">
+<head>
+<title><?php echo $this->yellow->page->getHtml("titleHeader") ?></title>
+<meta charset="utf-8" />
+<meta name="description" content="<?php echo $this->yellow->page->getHtml("description") ?>" />
+<meta name="author" content="<?php echo $this->yellow->page->getHtml("author") ?>" />
+<meta name="generator" content="Datenstrom Yellow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<?php echo $this->yellow->page->getExtraHtml("header") ?>
+</head>
+<body>
+<div class="<?php echo "page layout-".$this->yellow->page->getHtml("layout") ?>">
+<nav class="topnav" role="navigation">
+<a href="/">adamjames.me</a>
+<div class="topnav-links">
+<?php foreach ($this->yellow->content->top(true, false) as $page): ?>
+<?php if ($page->isVisible() && $page->getLocation() != "/"): ?>
+<a<?php if ($page->isActive()): ?> class="active"<?php endif ?> href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("titleNavigation") ?></a>
+<?php endif ?>
+<?php endforeach ?>
+</div>
+</nav>

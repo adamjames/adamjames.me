@@ -1,0 +1,22 @@
+<?php $this->yellow->layout("adamjames-header") ?>
+<div class="content">
+<div class="main feature-page" role="main">
+
+<article class="feature-detail">
+  <header class="feature-detail-header">
+    <h1><?php echo $this->yellow->page->getHtml("title") ?></h1>
+  </header>
+  <?php if ($this->yellow->page->isExisting("image")): ?>
+  <img src="<?php echo htmlspecialchars($this->yellow->page->get("image")) ?>" alt="<?php echo htmlspecialchars($this->yellow->page->get("imageAlt")) ?>" class="feature-detail-img"<?php if ($this->yellow->page->isExisting("imagePosition")): ?> style="object-position:<?php echo htmlspecialchars($this->yellow->page->get("imagePosition")) ?>"<?php endif ?>>
+  <?php endif ?>
+  <div class="feature-detail-content">
+    <?php echo $this->yellow->page->getContentHtml() ?>
+  </div>
+  <div class="feature-detail-back">
+    <a href="/projects/">&larr; All features</a>
+  </div>
+</article>
+
+</div>
+</div>
+<?php $this->yellow->layout("adamjames-footer") ?>

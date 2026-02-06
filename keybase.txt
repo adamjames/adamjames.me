@@ -1,0 +1,87 @@
+==================================================================
+https://keybase.io/mrwizrd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.adamjames.me
+  * I am mrwizrd (https://keybase.io/mrwizrd) on keybase.
+  * I have a public key with fingerprint C8C8 4F5D 4FD5 0388 BECB  73C5 1464 2518 529A B9BF
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101e1353bbd0610b0b5787a297b6fa3461a93881bf564be5202d08eb86bec27497f0a",
+      "fingerprint": "c8c84f5d4fd50388becb73c514642518529ab9bf",
+      "host": "keybase.io",
+      "key_id": "14642518529ab9bf",
+      "kid": "0101e1353bbd0610b0b5787a297b6fa3461a93881bf564be5202d08eb86bec27497f0a",
+      "uid": "cc6c8795083c84e1f374982ccbef2000",
+      "username": "mrwizrd"
+    },
+    "merkle_root": {
+      "ctime": 1693783456,
+      "hash_meta": "aa71c47dc2c68b4963fee44ba5f99d5e7861b26fb667fcb629416cf05a9c6168",
+      "seqno": 24884159
+    },
+    "revoke": {
+      "sig_ids": [
+        "b3d62f7948ce4ffef8047195719b69cc679c12bfa387d7916729c0883c1aa4070f"
+      ]
+    },
+    "service": {
+      "hostname": "www.adamjames.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1693783474,
+  "expire_in": 157680000,
+  "prev": "a1cd1f4fe4f766d8be199e036b61e53554b39571adabc7815144ec2e9d91d576",
+  "seqno": 25,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMPaAnicrVN7UBVVHL68mrjKowZD5aFtMWRzh/bs7jm7C2JOqaU0lk2UmXrZs3sW
+LnDvwu5yCRECegiW+RrSoETGxsaxZAJmRA1UhBl7mA1pDBI2MhWDjyZSBJlh7Cxj
+M03Tn/2xs3PO+X7f7/u+3zk9UWEud0icljL3xYZjJ0O+6d5U4tLG57SWM9jQypj0
+cqaAzPxIoUYs21vg05h0hgUsIICHPMYaiwCLWQxFSVQ4WcRIV3gBAUXmJQlgHSIB
+E8ixnMZKBEsIE5UTBVnUWYXxMLovkEvMItMXsCmtKqmSoENN0DXI0nKKxSKvQiAg
+gYNAgpysYBnrtDDPsJwKKg4rFknzGXSPLrwz8v4D/z/rLpmhU1WkSqIMWYmnwgnQ
+eYqQOFXFROdYlnWAFjEDip9QtN8s9W0yNabCw/iJWVBIvKZh2E62qu1zEADJvCjx
+AkTUn2Llef3EVmihoohAFURN5VQkYUFGvE6IIGAF6rKsQSJKCGAO6RghUVcx4mQB
+IFVnoSKrCCCJyrBIccBg0jlBkgQAZSrBJEGjgDjdLV8ujc1i0l9jMK8hThdlQVKJ
+oOtEl1hBBDKkH0YytSvKKuAwTUoSNVEGSORklZWofaAoAiuyOrOhwulmBn3qDLkz
+p3v+S0tL0xRN8efTpZVGtzxMkWnYhmoU0tM82y6y0p1w7LKiGTjB3ntEXuwLaPSm
+0IogMS2fEaBhUeS/chMFD0NeL/KZxOtzEFBEEp0C6/QhQSdIoGpAF3TqTURIo/cL
+yDJheYQRIJCHUMC8Y5aqxKooAXrxBDp2Imsy0CjbP4KEVKeSSzlpegHFLjEJU9F9
+en24K8Ttui8i1HlCLndk7N8PK6Ih5m5u3xsHo1KrE6yqS8l3oz94cnzRkrzG+NaB
+T4+9NxV3cR2aXHbgs33dIeumhgqPhI4GpubWVHdHZdTZHgCeeSl4Z/rX3sPXtlUN
+HRiLuHzoXY9wvUZvPJpa2fYzLhtchkqXegbauZo9NYuvjNycXuT6XcyNL92x4tnV
+zVF9o/MuHpud5I8Zy6m7vmt+w/mtzXsrP7763UdfuJs3tzzdVflIWKWV+237hqTN
+Xwbd2fVHq5b7wbnb89t7PTtXndyxcvfI51/7T2WChMxhmLZy+anJE132rZrktldH
+/9iEA7VblhUHQvj9e1v3b/euaArr9fxwKXsy/87BbQUXShoDGTeVs/Vdet7x38Jj
+PJ0td1K+Sg6Lz5zVk9/QlLfq0Yn3+6vXXbt6Y83sRFfMhucHDHR7bevLVQuqM9kV
+dXU3OsZv9T2WGRrJrm5teii/dmhnSRfcmNKBEi8OT+xPzTi0+2gley4xq25X6k+x
+cY1LajpOVwdHH9hy9pcFjS1njvcXx2Tvu9z/J/TGlpc8OEtJepjJKay/EjcyGj3R
+Gxve/mGz+0pW+OCqkDc729IugKHII0bHJ+MpCX2Ly5Z+39JzZFbGoNu1J/GF2vr0
+sfsvwN1pUfCV9SnDJ+Z4qvdETy+M3l6Rk/p44rxOmJ3wlPegZ+Nba547by88fDzy
+6kRq1BmU9c6PbJu2tmLvE9FvN4XWl9f+BVAa9zc=
+=0V/H
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mrwizrd
+
+==================================================================

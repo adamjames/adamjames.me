@@ -1,2 +1,4 @@
-
+system/extensions/yellow-system.ini
+system/extensions/yellow-user.ini
+system/extensions/yellow-website.log
 .DS_Store

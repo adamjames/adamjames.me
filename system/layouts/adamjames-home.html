@@ -1,0 +1,99 @@
+<?php $this->yellow->layout("adamjames-header") ?>
+<div class="content home">
+  <div class="main" role="main">
+
+    <div class="home-row">
+
+      <div class="home-intro">
+        <h1 class="hero"><?php echo htmlspecialchars($this->yellow->page->get("hero")) ?><span class="caret"></span></h1>
+        <p class="byline"><?php echo $this->yellow->page->get("byline") ?></p>
+        <?php echo $this->yellow->page->getContentHtml() ?>
+        <p>
+          <strong>@:</strong>
+          <a href="mailto:<?php echo htmlspecialchars($this->yellow->page->get("email")) ?>" class="link bold"><?php echo htmlspecialchars($this->yellow->page->get("email")) ?></a>, or contact me on
+          <a href="<?php echo htmlspecialchars($this->yellow->page->get("linkedin")) ?>" class="link bold">LinkedIn!</a>
+        </p>
+      </div>
+
+      <div class="home-changelog">
+        <h2>Changelog</h2>
+        <p class="changelog-cta"><?php echo $this->yellow->page->get("changelogCta") ?></p>
+        <div class="card">
+          <div class="changelog">
+            <?php $changelog = $this->yellow->content->find("/experience/")->getChildren() ?>
+            <?php foreach ($changelog as $entry): ?>
+            <div class="log-row">
+              <span class="log-year"><?php echo htmlspecialchars($entry->get("year")) ?></span>
+              <span class="log-role"><a href="<?php echo htmlspecialchars($entry->get("url")) ?>"><strong><?php echo htmlspecialchars($entry->get("company")) ?></strong></a> · <?php echo htmlspecialchars($entry->get("role")) ?></span>
+              <span class="tags">
+                <span class="tag tag-<?php echo htmlspecialchars($entry->get("industryColor")) ?>"><?php echo htmlspecialchars($entry->get("industry")) ?></span>
+                <?php foreach (preg_split("/\s*,\s*/", $entry->get("tags")) as $tag): ?>
+                <span class="tag"><?php echo htmlspecialchars($tag) ?></span>
+                <?php endforeach ?>
+              </span>
+            </div>
+            <?php endforeach ?>
+          </div>
+        </div>
+        <div class="section-more"><a href="/experience/">More →</a></div>
+      </div>
+
+    </div>
+
+    <div class="home-row bottom-row">
+
+      <div class="home-blog">
+        <h2>Errata</h2>
+        <?php $allPosts = $this->yellow->content->find("/blog/")->getChildren()->sort("published", false) ?>
+        <?php $postsLimit = 4 ?>
+        <?php $pages = $allPosts->limit($postsLimit) ?>
+        <?php $first = true ?>
+        <?php foreach ($pages as $page): ?>
+        <?php if ($first): ?>
+        <a href="<?php echo $page->getLocation(true) ?>" class="card blog-featured">
+          <span class="blog-title"><?php echo $page->getHtml("title") ?></span>
+          <span class="blog-excerpt"><?php echo strip_tags($this->yellow->toolbox->createTextDescription($page->getContentHtml(), 200, false, "<!--more-->", "")) ?></span>
+          <span class="blog-date"><?php echo $page->getDateHtml("published") ?></span>
+        </a>
+          <?php $first = false ?>
+          <?php else: ?>
+          <?php if ($page === $pages[1]): ?><div class="card blog-compact-list"><?php endif ?>
+          <a href="<?php echo $page->getLocation(true) ?>" class="blog-entry">
+            <span class="blog-title"><?php echo $page->getHtml("title") ?></span>
+            <span class="blog-date"><?php echo $page->getDateHtml("published") ?></span>
+          </a>
+          <?php endif ?>
+          <?php endforeach ?>
+        <?php if (count($pages) > 1): ?></div><?php endif ?>
+        <?php if (count($allPosts) > $postsLimit): ?>
+        <div class="section-more"><a href="/blog/">More →</a></div>
+        <?php endif ?>
+      </div>
+
+      <div class="home-features">
+        <h2>Features</h2>
+        <div class="features">
+          <?php $allFeatures = $this->yellow->content->find("/projects/")->getChildren() ?>
+          <?php $featuresLimit = 3 ?>
+          <?php $features = $allFeatures->limit($featuresLimit) ?>
+          <?php foreach ($features as $feature): ?>
+          <a href="<?php echo $feature->isExisting("url") ? htmlspecialchars($feature->get("url")) : $feature->getLocation(true) ?>" class="card feature">
+            <img src="<?php echo htmlspecialchars($feature->get("image")) ?>" alt="<?php echo htmlspecialchars($feature->get("imageAlt")) ?>" class="feature-img"<?php if ($feature->isExisting("imagePosition")): ?> style="object-position:<?php echo htmlspecialchars($feature->get("imagePosition")) ?>"<?php endif ?>>
+            <div class="feature-body">
+              <h3><?php echo $feature->getHtml("title") ?></h3>
+              <p><?php echo strip_tags($feature->getContentHtml()) ?></p>
+            </div>
+          </a>
+          <?php endforeach ?>
+        </div>
+        <?php if (count($allFeatures) > $featuresLimit): ?>
+        <div class="section-more"><a href="/projects/">More →</a></div>
+        <?php endif ?>
+      </div>
+
+    </div>
+
+  </div>
+  <?php $this->yellow->layout("adamjames-footer") ?>
+</div>
+
