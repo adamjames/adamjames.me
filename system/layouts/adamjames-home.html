@@ -5,7 +5,7 @@
     <div class="home-row">
 
       <div class="home-intro">
-        <h1 class="hero"><?php echo htmlspecialchars($this->yellow->page->get("hero")) ?><span class="caret"></span></h1>
+        <h1 class="hero"><?php echo htmlspecialchars($this->yellow->page->get("hero")) ?>&nbsp;<span class="caret"></span></h1>
         <p class="byline"><?php echo $this->yellow->page->get("byline") ?></p>
         <?php echo $this->yellow->page->getContentHtml() ?>
         <p>
@@ -52,7 +52,7 @@
         <?php if ($first): ?>
         <a href="<?php echo $page->getLocation(true) ?>" class="card blog-featured">
           <span class="blog-title"><?php echo $page->getHtml("title") ?></span>
-          <span class="blog-excerpt"><?php echo strip_tags($this->yellow->toolbox->createTextDescription($page->getContentHtml(), 200, false, "<!--more-->", "")) ?></span>
+          <span class="blog-excerpt"><?php echo strip_tags($this->yellow->toolbox->createTextDescription($page->getContentHtml(), 120, false, "<!--more-->", "")) ?></span>
           <span class="blog-date"><?php echo $page->getDateHtml("published") ?></span>
         </a>
           <?php $first = false ?>

@@ -22,15 +22,4 @@ class YellowAdamjames {
             $this->yellow->system->save($fileName, array("theme" => $this->yellow->system->getDifferent("theme")));
         }
     }
-
-    public function onParsePageExtra($page, $name) {
-        $output = null;
-        if ($name=="footer" && $this->yellow->system->get("theme")=="adamjames") {
-            $layout = $page->get("layout");
-            if ($layout=="blog") {
-                $output = "<script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.main');if(m){var b=document.createElement('div');b.className='back-link';b.innerHTML='<a href=\"/blog/\">← Back to list</a>';m.insertBefore(b,m.firstChild);}});</script>\n";
-            }
-        }
-        return $output;
-    }
 }
