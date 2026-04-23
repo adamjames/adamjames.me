@@ -17,7 +17,10 @@
   <?php foreach ($features as $feature): ?>
   <?php $featureUrl = $feature->isExisting("link") ? $feature->get("link") : $feature->getLocation(true) ?>
   <a href="<?php echo htmlspecialchars($featureUrl) ?>" class="card feature feature-large"<?php if ($feature->isExisting("link")): ?> target="_blank" rel="noopener"<?php endif ?>>
-    <img src="<?php echo htmlspecialchars($feature->get("image")) ?>" alt="<?php echo htmlspecialchars($feature->get("imageAlt")) ?>" class="feature-img"<?php if ($feature->isExisting("imagePosition")): ?> style="object-position:<?php echo htmlspecialchars($feature->get("imagePosition")) ?>"<?php endif ?>>
+    <picture>
+      <source srcset="<?php echo htmlspecialchars($feature->get("image")) ?>" type="image/webp">
+      <img src="<?php echo htmlspecialchars($feature->isExisting("imageFallback") ? $feature->get("imageFallback") : $feature->get("image")) ?>" alt="<?php echo htmlspecialchars($feature->get("imageAlt")) ?>" class="feature-img"<?php if ($feature->isExisting("imagePosition")): ?> style="object-position:<?php echo htmlspecialchars($feature->get("imagePosition")) ?>"<?php endif ?>>
+    </picture>
     <div class="feature-body">
       <h3><?php echo $feature->getHtml("title") ?></h3>
       <p><?php echo strip_tags($feature->getContentHtml()) ?></p>

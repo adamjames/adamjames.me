@@ -2,6 +2,7 @@
 Title: UK Bus Map
 Layout: adamjames-feature
 image: /media/images/busmap.webp
+imageFallback: /media/images/busmap_crushed.jpeg
 imageAlt: Bus map
 url: https://busmap.tail5c8e3.ts.net/
 ---
