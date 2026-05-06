@@ -3,7 +3,7 @@ Title: PolicyMogul
 year: 2026
 company: PolicyMogul
 companyFull: PolicyMogul
-url: https://poliycmogul.com
+url: https://policymogul.com
 role: Software Engineer
 tags: Political Intelligence
 industry: Public Affairs
